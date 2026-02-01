@@ -1,12 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon portfolio pro</title>
+    <title>Mon Portfolio | Développeur Android</title>
+    <style>
+        /* CSS : Le style de ton portfolio */
+        :root {
+            --primary: #3DDC84; /* Vert Android officiel */
+            --dark: #121212;
+            --light: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .hero {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin: 0; }
+        .hero p { font-size: 1.5rem; color: var(--primary); }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            border-bottom: 3px solid var(--primary);
+            width: fit-content;
+            margin: 2rem auto;
+        }
+
+        /* Grille des projets */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card-content { padding: 1.5rem; }
+        .card-tag {
+            background: var(--primary);
+            color: var(--dark);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--dark);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestiae totam blanditiis expedita ea impedit pariatur voluptatum libero accusantium quas sapiente fugiat quisquam earum, sit exercitationem reprehenderit asperiores aperiam? Harum.</p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus excepturi rem asperiores voluptas amet beatae illo architecto consequatur voluptate cumque, sint est at repudiandae molestiae officia distinctio neque voluptates in
+
+    <header>
+        <nav>
+            <strong>MON PORTFOLIO</strong>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Jean Développeur</h1>
+        <p>Expert en Développement Natif Android (Kotlin/Java)</p>
+        <a href="#contact" class="btn">Me contacter</a>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Mes Projets</h2>
+        <div class="projects-grid">
+            
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-tag">Kotlin</span>
+                    <h3>Application Météo</h3>
+                    <p>Utilisation de Retrofit pour consommer l'API OpenWeather et affichage des prévisions en temps réel.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-tag">SQLite</span>
+                    <h3>Gestionnaire de Tâches</h3>
+                    <p>Une application CRUD complète avec persistance de données locale et notifications de rappel.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-tag">Jetpack Compose</span>
+                    <h3>Quiz App</h3>
+                    <p>Interface moderne construite entièrement avec Jetpack Compose et gestion d'états (State).</p>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 id="contact" class="section-title">Contact</h2>
+        <div style="text-align: center;">
+            <p>Envie de collaborer ? Envoyez-moi un message !</p>
+            <p><strong>Email :</strong> contact@monemail.com</p>
+            <p><strong>GitHub :</strong> github.com/monpseudo</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Créé avec passion pour le développement mobile</p>
+    </footer>
+
 </body>
 </html>
